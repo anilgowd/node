@@ -1,0 +1,78 @@
+<div sb-permissions permission-only="CONTENT_CREATOR,CONTENT_CREATION,CONTENT_REVIEWER,CONTENT_REVIEW">
+    <div class="ui grid">
+        <div class="twelve wide column ">
+            <div class="ui grid">
+                <div class="three wide column">
+                    <div class="workspacecontent link ui card" ui-sref="CreateTextbook">
+                        <div class="content">
+                            <div class="textcontent">
+                                <i class='my-icon file text outline icon '></i>
+                                <span class="my-text">{{$root.labels.WORKSPACE.startCreating.textbook}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="workspaceinstuction">{{$root.labels.WORKSPACE.startCreating.textbookDescription}}</p>
+                </div>
+                <div class="three wide column">
+                    <div class="workspacecontent ui link card" ui-sref="CreateCourse">
+                        <div class="content">
+                            <div class="textcontent">
+                                <i class='my-icon file text outline icon'></i>
+                                <span class="my-text">{{$root.labels.WORKSPACE.startCreating.course}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="workspaceinstuction">{{$root.labels.WORKSPACE.startCreating.courseDescription}}</p>
+                </div>
+                <div class="three wide column">
+                    <div class="workspacecontent ui link card" ui-sref="CreateLesson">
+                        <div class="content">
+                            <div class="textcontent">
+                                <i class='my-icon file text icon'></i>
+                                <span class="my-text">{{$root.labels.WORKSPACE.startCreating.lesson}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="workspaceinstuction">{{$root.labels.WORKSPACE.startCreating.lessonDescription}}</p>
+                </div>
+                <div class="three wide column">
+                    <div class="workspacecontent ui link card" ui-sref="CreateCollection">
+                        <div class="content">
+                            <div class="textcontent">
+                                <i class='my-icon folder open outline icon'></i>
+                                <span class="my-text">{{$root.labels.WORKSPACE.startCreating.collection}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="workspaceinstuction">{{$root.labels.WORKSPACE.startCreating.collectionDescription}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="twelve wide column ">
+            <div class="ui grid">
+                <div class="three wide column">
+                    <div class="workspacecontent ui link card" ui-sref="CreateLessonPlan">
+                        <div class="content">
+                            <div class="textcontent">
+                                <i class='my-icon file text outline icon'></i>
+                                <span class="my-text">{{$root.labels.WORKSPACE.startCreating.lessonPlan}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="workspaceinstuction">{{$root.labels.WORKSPACE.startCreating.lessonPlanDescription}}</p>
+                </div>
+                <div class="three wide column">
+                    <div class="workspacecontent ui link card" ui-sref="GenericEditor">
+                        <div class="content">
+                            <div class="textcontent">
+                                <i class='my-icon upload icon'></i>
+                                <span class="my-text">{{$root.labels.WORKSPACE.startCreating.contentUpload}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="workspaceinstuction">{{$root.labels.WORKSPACE.startCreating.contentUploadDescription}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

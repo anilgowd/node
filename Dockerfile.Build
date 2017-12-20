@@ -1,0 +1,27 @@
+#Dockerfile for the player setup
+FROM node:6.11.0
+MAINTAINER "Manojvv" "manojv@ilimi.in"
+RUN apt update \
+    && apt-get install -y python \
+    && apt-get install -y python-dev \
+    && apt-get update \
+    && apt-get install git \
+    && mkdir -p /opt/player \
+    && apt-get install autoconf \
+    && apt-get install g++ \
+    && apt-get install make \
+    && apt-get install nasm
+WORKDIR /opt/player
+COPY * /opt/player/
+RUN apt-get install -y zip \
+    && apt-get install -y  bzip2 \
+    && npm install -g bower \
+    && npm install -g gulp \
+    && npm install gulp --save-dev 
+WORKDIR /opt/player/
+RUN npm install --unsafe-perm
+RUN bower cache clean
+RUN bower install /opt/player/bower.json  --force
+RUN gulp
+WORKDIR /opt/player
+CMD ["zip", "-r", "player-dist.zip",  "dist"]
